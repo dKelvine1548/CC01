@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="McExample.BO">
+      <HintPath>..\..\..\Projet_McEXEMPLE\McExample.DAL\bin\Debug\McExample.BO.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\..\Projet_McEXEMPLE\McExample.DAL\bin\Debug\Newtonsoft.Json.dll</HintPath>
     </Reference>
