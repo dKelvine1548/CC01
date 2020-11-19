@@ -18,6 +18,10 @@ namespace CC01.BO
         public byte[]Picture { get; set; }
         public string NameSchool{ get; set; }
 
+        public Student()
+        {
+
+        }
         public Student(string registerNumber, string name, string surname,
             DateTime birthDay, string placeBirth, long telephone, string email, byte[] picture, string nameSchool)
         {

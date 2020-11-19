@@ -13,6 +13,10 @@ namespace CC01.BO
         public long SchoolNumber { get; set; }
         public byte[] Logo { get; set; }
 
+        public School()
+        {
+
+        }
         public School(string nameSchool, string email, long schoolNumber, byte[] logo)
         {
             NameSchool = nameSchool;
