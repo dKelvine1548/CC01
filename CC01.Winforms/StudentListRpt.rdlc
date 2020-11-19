@@ -11,7 +11,7 @@
               <TextRun>
                 <Value>STUDENT LIST</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>16pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -37,10 +37,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.72917in</Height>
+    <Height>3.39583in</Height>
     <Style />
   </Body>
-  <Width>8.36458in</Width>
+  <Width>8.73958in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
