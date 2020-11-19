@@ -11,7 +11,7 @@
               <TextRun>
                 <Value>STUDENT LIST</Value>
                 <Style>
-                  <FontSize>16pt</FontSize>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
