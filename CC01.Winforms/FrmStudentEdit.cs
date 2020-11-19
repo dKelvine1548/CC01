@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CC01.Winforms
 {
-    public partial class Form1 : Form
+    public partial class FrmStudentEdit : Form
     {
-        public Form1()
+        public FrmStudentEdit()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
