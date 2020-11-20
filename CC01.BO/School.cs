@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,18 +7,19 @@ using System.Threading.Tasks;
 
 namespace CC01.BO
 {
+    [Serializable]
     public class School
     {
         public string NameSchool { get; set; }
         public string Email { get; set; }
         public long SchoolNumber { get; set; }
-        public byte[] Logo { get; set; }
+        public string Logo { get; set; }
 
         public School()
         {
 
         }
-        public School(string nameSchool, string email, long schoolNumber, byte[] logo)
+        public School(string nameSchool, string email, long schoolNumber, string logo)
         {
             NameSchool = nameSchool;
             Email = email;

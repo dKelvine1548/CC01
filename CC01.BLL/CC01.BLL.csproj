@@ -31,12 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="McExample.BO">
-      <HintPath>..\..\..\Projet_McEXEMPLE\McExample.BO\bin\Debug\McExample.BO.dll</HintPath>
-    </Reference>
-    <Reference Include="McExample.DAL">
-      <HintPath>..\..\..\Projet_McEXEMPLE\McExample.DAL\bin\Debug\McExample.DAL.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,8 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="SchoolBLO.cs" />
+    <Compile Include="StudentBLO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypingExceptioncs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CC01.BO\CC01.BO.csproj">
+      <Project>{10E8D0D6-9828-4725-95FD-22F28F9A2F7E}</Project>
+      <Name>CC01.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CC01.DAL\CC01.DAL.csproj">
+      <Project>{7E4CA848-48EA-40A1-8CE7-1920F226DE63}</Project>
+      <Name>CC01.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

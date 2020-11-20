@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CC01.BO
 {
+    [Serializable]
     public class Student
     {
         public string RegisterNumber { get; set; }
@@ -15,15 +16,15 @@ namespace CC01.BO
         public string PlaceBirth { get; set; }
         public long Telephone { get; set; }
         public string Email { get; set; }
-        public byte[]Picture { get; set; }
         public string NameSchool{ get; set; }
+        public byte[] Picture { get; set; }
 
         public Student()
         {
 
         }
-        public Student(string registerNumber, string name, string surname,
-            DateTime birthDay, string placeBirth, long telephone, string email, byte[] picture, string nameSchool)
+
+        public Student(string registerNumber, string name, string surname, DateTime birthDay, string placeBirth, long telephone, string email, string nameSchool, byte[] picture)
         {
             RegisterNumber = registerNumber;
             Name = name;
@@ -32,14 +33,14 @@ namespace CC01.BO
             PlaceBirth = placeBirth;
             Telephone = telephone;
             Email = email;
-            Picture = picture;
             NameSchool = nameSchool;
+            Picture = picture;
         }
 
         public override bool Equals(object obj)
         {
             return obj is Student student &&
-                 RegisterNumber.Equals(student.RegisterNumber, StringComparison.OrdinalIgnoreCase);
+                   RegisterNumber == student.RegisterNumber;
         }
 
         public override int GetHashCode()

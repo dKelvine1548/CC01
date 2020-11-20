@@ -57,6 +57,7 @@
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +69,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmSchoolEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSchoolEdit.Designer.cs">
+      <DependentUpon>FrmSchoolEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSchoolList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSchoolList.Designer.cs">
+      <DependentUpon>FrmSchoolList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStudentCardList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,15 +93,30 @@
     <Compile Include="FrmStudentEdit.Designer.cs">
       <DependentUpon>FrmStudentEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmStudentPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudentPreview.Designer.cs">
+      <DependentUpon>FrmStudentPreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="StudentListPrint.cs" />
+    <EmbeddedResource Include="FrmSchoolEdit.resx">
+      <DependentUpon>FrmSchoolEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSchoolList.resx">
+      <DependentUpon>FrmSchoolList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmStudentCardList.resx">
       <DependentUpon>FrmStudentCardList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStudentEdit.resx">
       <DependentUpon>FrmStudentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudentPreview.resx">
+      <DependentUpon>FrmStudentPreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,6 +129,7 @@
     </Compile>
     <EmbeddedResource Include="StudentListRpt.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\StudentListPrint.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,6 +157,16 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CC01.BLL\CC01.BLL.csproj">
+      <Project>{7CE3F274-7451-4EEF-BBBC-8C2B72584272}</Project>
+      <Name>CC01.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CC01.BO\CC01.BO.csproj">
+      <Project>{10E8D0D6-9828-4725-95FD-22F28F9A2F7E}</Project>
+      <Name>CC01.BO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
