@@ -42,6 +42,7 @@ namespace CC01.Winforms
         }
        
         
+
         private void FrmStudentCardList_Load(object sender, EventArgs e)
         {
             loadData();
@@ -101,7 +102,7 @@ namespace CC01.Winforms
                     )
                 );
             }
-            Form f = new FrmStudentPreview("StudentListRpt.rdlc", items);
+            Form f = new FrmPreview("StudentListRpt.rdlc", items);
             f.Show();
         }
 

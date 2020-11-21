@@ -17,7 +17,7 @@ namespace CC01.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmStudentCardList());
+            Application.Run(new FrmParent());
                 
         }
     }

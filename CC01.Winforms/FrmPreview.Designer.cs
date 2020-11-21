@@ -1,6 +1,6 @@
 ﻿namespace CC01.Winforms
 {
-    partial class FrmStudentPreview
+    partial class FrmPreview
     {
         /// <summary>
         /// Required designer variable.
@@ -33,21 +33,22 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(760, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // FrmStudentPreview
+            // FrmPreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "FrmStudentPreview";
-            this.Text = "FrmStudentPreview";
-            this.Load += new System.EventHandler(this.FrmStudentPreview_Load);
+            this.Name = "FrmPreview";
+            this.Text = "FrmPreview";
+            this.Load += new System.EventHandler(this.FrmPreview_Load);
             this.ResumeLayout(false);
 
         }

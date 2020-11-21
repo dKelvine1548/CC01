@@ -9,10 +9,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>STUDENT LIST</Value>
+                <Value>STUDENTS LIST</Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>20pt</FontSize>
+                  <FontFamily>Book Antiqua</FontFamily>
+                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -23,13 +23,14 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.94932cm</Top>
-        <Left>6.59553cm</Left>
-        <Height>1.31438cm</Height>
-        <Width>7.02438cm</Width>
+        <Top>0.79058cm</Top>
+        <Left>5.53297cm</Left>
+        <Height>0.89104cm</Height>
+        <Width>7.15667cm</Width>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
+            <Width>2pt</Width>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -41,24 +42,24 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.96214cm</Width>
+              <Width>3.61484cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.31151cm</Width>
+              <Width>3.13859cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.75651cm</Width>
+              <Width>3.56193cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.70637cm</Width>
+              <Width>2.87401cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.70637cm</Width>
+              <Width>2.87401cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.38052cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -70,19 +71,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>PICTURE</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -109,19 +105,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>REGISTER NUMBER</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox4</rd:DefaultName>
@@ -148,10 +139,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>NAME</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox6</rd:DefaultName>
@@ -170,7 +165,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox8">
+                    <Textbox Name="Textbox9">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -178,13 +173,17 @@
                           <TextRuns>
                             <TextRun>
                               <Value>SURNAME</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -200,7 +199,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox10">
+                    <Textbox Name="Textbox11">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -208,13 +207,17 @@
                           <TextRuns>
                             <TextRun>
                               <Value>NAME SCHOOL</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -231,7 +234,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>2.76958cm</Height>
+              <Height>1.38052cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -242,7 +245,8 @@
                       <Sizing>FitProportional</Sizing>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
+                          <Width>2pt</Width>
                         </Border>
                       </Style>
                     </Image>
@@ -257,28 +261,6 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
                               <Value>=Fields!RegisterNumber.Value</Value>
                               <Style />
                             </TextRun>
@@ -287,18 +269,8 @@
                             <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
                       </Paragraphs>
+                      <rd:DefaultName>RegisterNumber</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -321,31 +293,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
                               <Value>=Fields!Name.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
+                      <rd:DefaultName>Name</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -368,31 +325,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
                               <Value>=Fields!Surname.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
+                      <rd:DefaultName>Surname</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -415,31 +357,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
                               <Value>=Fields!NameSchool.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
+                      <rd:DefaultName>NameSchool</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -477,10 +404,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>2.9337cm</Top>
-        <Left>2.58974cm</Left>
-        <Height>3.36958cm</Height>
-        <Width>16.4429cm</Width>
+        <Top>2.3078cm</Top>
+        <Left>0.33699cm</Left>
+        <Height>2.76104cm</Height>
+        <Width>16.06338cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -489,10 +416,15 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>3.47917in</Height>
-    <Style />
+    <Height>3.54167in</Height>
+    <Style>
+      <Border>
+        <Style>Solid</Style>
+        <Width>3pt</Width>
+      </Border>
+    </Style>
   </Body>
-  <Width>8.44792in</Width>
+  <Width>7.09375in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -510,7 +442,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>3ec8f881-3cfe-494e-8cf4-cbc84314a9cd</rd:DataSourceID>
+      <rd:DataSourceID>cdcd872d-37de-419a-8fd1-8b22591d50e4</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -549,5 +481,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>a4270d20-4933-46a7-88c9-a3e4490615f7</rd:ReportID>
+  <rd:ReportID>29a8f1f0-5013-40c7-a349-53e8aaa79dac</rd:ReportID>
 </Report>

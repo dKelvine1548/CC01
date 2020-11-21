@@ -10,26 +10,23 @@ using System.Windows.Forms;
 
 namespace CC01.Winforms
 {
-    public partial class FrmStudentPreview : Form
+    public partial class FrmPreview : Form
     {
         private object items { get; set; }
         private object reportPath { get; set; }
-        public FrmStudentPreview()
+        public FrmPreview()
         {
             InitializeComponent();
         }
 
-        public FrmStudentPreview(string reportPath, object items) : this()
+        public FrmPreview(string reportPath, object items) : this()
         {
             this.reportPath = reportPath;
             this.items = items;
         }
-
-
-        private void FrmStudentPreview_Load(object sender, EventArgs e)
+        private void FrmPreview_Load(object sender, EventArgs e)
         {
-
-            this.reportViewer1.LocalReport.ReportPath = "ProductListRpt.rdlc";
+              this.reportViewer1.LocalReport.ReportPath = "StudentListRpt.rdlc";
             this.reportViewer1.LocalReport.DataSources.Add
             (
                 new Microsoft.Reporting.WinForms.ReportDataSource
