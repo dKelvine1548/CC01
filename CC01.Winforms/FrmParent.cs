@@ -28,5 +28,12 @@ namespace CC01.Winforms
         {
             Close();
         }
+
+        private void createToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form f = new FrmSchoolList();
+            f.Show();
+
+        }
     }
 }

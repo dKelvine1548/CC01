@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
-using ZXing;
+using Zen.Barcode;
 
 
 
@@ -49,15 +49,17 @@ namespace CC01.Winforms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
+           
+            //string barCode = txtRegisterNumber.Text;
+            //Zen.Barcode.Code128BarcodeDraw brCode = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+            //pictureBox2 .Image = brCode.Draw(barCode, 60);
+                    
             try
             {
                 checkForm();
-                BarcodeWriter writer = new BarcodeWriter(){ Format = BarcodeFormat.CODE_128};
-                // pic.Image = writer.Write
                 Student newStudent = new Student
-                (
-                     txtRegisterNumber.Text,
+                (   
+                    txtRegisterNumber.Text,
                     txtName.Text,
                     txtSurname.Text,
                     DateTime.Parse(dtpBirthday.Text),
@@ -181,6 +183,12 @@ namespace CC01.Winforms
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             pictureBox1.ImageLocation = null;
+        }
+
+        private void btnCodeBar_Click(object sender, EventArgs e)
+        {
+            Zen.Barcode.CodeQrBarcodeDraw codeQr = Zen.Barcode.BarcodeDrawFactory.CodeQr;
+            pictureBox2.Image = codeQr.Draw(txtRegisterNumber.Text, 25);
         }
     }
 

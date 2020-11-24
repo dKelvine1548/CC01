@@ -11,71 +11,43 @@ namespace CC01.BLL
 {
     public class SchoolBLO
     {
-        private SchoolDAO schoolRepo;
 
-        private string dbFolder;
+        SchoolDAO schoolRepo;
+     
         public SchoolBLO(string dbFolder)
         {
-            this.dbFolder = dbFolder;
             schoolRepo = new SchoolDAO(dbFolder);
         }
-        public void CreateCompany(School oldSchool, School newSchool)
-        {
-            string filename = null;
-            if (!string.IsNullOrEmpty(newSchool.Logo))
-            {
-                string ext = Path.GetExtension(newSchool.Logo);
-                filename = Guid.NewGuid().ToString() + ext;
-                FileInfo fileSource = new FileInfo(newSchool.Logo);
-                string filePath = Path.Combine(dbFolder, "logo", filename);
-                FileInfo fileDest = new FileInfo(filePath);
-                if (!fileDest.Directory.Exists)
-                    fileDest.Directory.Create();
-                fileSource.CopyTo(fileDest.FullName);
-            }
-            newSchool.Logo = filename;
-            schoolRepo.Add(newSchool);
 
-            if (!string.IsNullOrEmpty(oldSchool.Logo))
-                File.Delete(oldSchool.Logo);
+        public void CreateSchool(School school)
+        {
+            schoolRepo.Add(school);
         }
 
-        public School GetSchool()
+        public IEnumerable<School> GetAllSchools()
         {
-            School school = schoolRepo.Get();
-            if (school != null)
-                if (!string.IsNullOrEmpty(school.Logo))
-                    school.Logo = Path.Combine(dbFolder, "logo", school.Logo);
-            return school;
+            return schoolRepo.Find(); 
         }
 
-        //public void EditSchool(School oldSchool, School newSchool)
-        //{
-        //    schoolRepo.Set(oldSchool, newSchool);
-        //}
+        public void EditSchool(School oldSchool, School newSchool)
+        {
+            schoolRepo.Set(oldSchool, newSchool);
+        }
 
-        //public void DeleteSchool(School school)
-        //{
-        //    schoolRepo.Remove(school);
-        //}
+        public void DeleteSchool(School school)
+        {
+            schoolRepo.Remove(school);
+        }
 
+        public IEnumerable<School> GetByName(string nameSchool)
+        {
+            return schoolRepo.Find(x => x.NameSchool == nameSchool);
+        }
 
-        //public IEnumerable<School> GetAllSchool()
-        //{
-        //    return schoolRepo.Find();
-        //}
+       public IEnumerable<School> GetBy(Func<School, bool> predicate)
+        {
+            return schoolRepo.Find(predicate);
+        }
 
-
-        //public IEnumerable<Student> GetByRegisterNumber(string registerNumber)
-        //{
-        //    return schoolRepo.Find(x => x.RegisterNumber == registerNumber);
-        //}
-
-        //public IEnumerable<Student> GetBy(Func<Student, bool> predicate)
-        //{
-        //    return schoolRepo.Find(predicate);
-        //}
-
-       
     }
 }

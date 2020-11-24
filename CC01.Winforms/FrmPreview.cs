@@ -40,5 +40,10 @@ namespace CC01.Winforms
             this.reportViewer1.ZoomPercent = 100;
             this.reportViewer1.RefreshReport();
         }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

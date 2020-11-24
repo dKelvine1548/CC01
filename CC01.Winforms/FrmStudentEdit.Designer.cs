@@ -50,12 +50,15 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtRegisterNumber = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCodeBar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTelephone
             // 
-            this.txtTelephone.Location = new System.Drawing.Point(382, 198);
+            this.txtTelephone.Location = new System.Drawing.Point(583, 207);
             this.txtTelephone.Name = "txtTelephone";
             this.txtTelephone.Size = new System.Drawing.Size(312, 29);
             this.txtTelephone.TabIndex = 60;
@@ -63,7 +66,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(378, 171);
+            this.label10.Location = new System.Drawing.Point(579, 180);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 24);
             this.label10.TabIndex = 59;
@@ -71,7 +74,7 @@
             // 
             // txtNameSchool
             // 
-            this.txtNameSchool.Location = new System.Drawing.Point(382, 276);
+            this.txtNameSchool.Location = new System.Drawing.Point(583, 285);
             this.txtNameSchool.Name = "txtNameSchool";
             this.txtNameSchool.Size = new System.Drawing.Size(312, 29);
             this.txtNameSchool.TabIndex = 58;
@@ -79,7 +82,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(378, 255);
+            this.label9.Location = new System.Drawing.Point(579, 258);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(120, 24);
             this.label9.TabIndex = 57;
@@ -87,7 +90,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(382, 356);
+            this.txtEmail.Location = new System.Drawing.Point(583, 366);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(312, 29);
             this.txtEmail.TabIndex = 56;
@@ -95,7 +98,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(378, 335);
+            this.label8.Location = new System.Drawing.Point(579, 335);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 24);
             this.label8.TabIndex = 55;
@@ -145,7 +148,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel1.Location = new System.Drawing.Point(583, 6);
+            this.linkLabel1.Location = new System.Drawing.Point(757, 18);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(20, 24);
             this.linkLabel1.TabIndex = 43;
@@ -156,7 +159,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(378, 6);
+            this.label5.Location = new System.Drawing.Point(579, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 24);
             this.label5.TabIndex = 49;
@@ -166,9 +169,9 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(382, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(583, 45);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(221, 124);
+            this.pictureBox1.Size = new System.Drawing.Size(194, 124);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
@@ -176,13 +179,14 @@
             // 
             // btnSave
             // 
-            this.btnSave.ForeColor = System.Drawing.Color.Green;
+            this.btnSave.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(25, 421);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(308, 46);
             this.btnSave.TabIndex = 44;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label4
@@ -222,7 +226,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(382, 421);
+            this.btnCancel.Location = new System.Drawing.Point(583, 431);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(312, 46);
             this.btnCancel.TabIndex = 45;
@@ -247,6 +251,28 @@
             this.txtRegisterNumber.Size = new System.Drawing.Size(312, 29);
             this.txtRegisterNumber.TabIndex = 39;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(381, 45);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(162, 124);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 61;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnCodeBar
+            // 
+            this.btnCodeBar.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnCodeBar.Location = new System.Drawing.Point(381, 180);
+            this.btnCodeBar.Name = "btnCodeBar";
+            this.btnCodeBar.Size = new System.Drawing.Size(162, 35);
+            this.btnCodeBar.TabIndex = 62;
+            this.btnCodeBar.Text = "CodeBar";
+            this.btnCodeBar.UseVisualStyleBackColor = false;
+            this.btnCodeBar.Click += new System.EventHandler(this.btnCodeBar_Click);
+            // 
             // FrmStudentEdit
             // 
             this.AcceptButton = this.btnSave;
@@ -254,7 +280,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(740, 512);
+            this.ClientSize = new System.Drawing.Size(939, 512);
+            this.Controls.Add(this.btnCodeBar);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtTelephone);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtNameSchool);
@@ -282,6 +310,7 @@
             this.Name = "FrmStudentEdit";
             this.Text = "FrmStudentEdit";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,5 +340,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtRegisterNumber;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnCodeBar;
     }
 }

@@ -60,7 +60,7 @@ namespace CC01.DAL
         {
             var index = students.IndexOf(student);
             if (index >= 0)
-                throw new DuplicateNameException("This product reference already exists !");
+                throw new DuplicateNameException("This student already exists !");
             students.Add(student);
             Save();
         }

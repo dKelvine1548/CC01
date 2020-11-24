@@ -48,7 +48,7 @@
             this.txtNameSchool.Location = new System.Drawing.Point(12, 53);
             this.txtNameSchool.Name = "txtNameSchool";
             this.txtNameSchool.Size = new System.Drawing.Size(312, 29);
-            this.txtNameSchool.TabIndex = 70;
+            this.txtNameSchool.TabIndex = 0;
             // 
             // label10
             // 
@@ -64,7 +64,7 @@
             this.txtSchoolNumber.Location = new System.Drawing.Point(12, 148);
             this.txtSchoolNumber.Name = "txtSchoolNumber";
             this.txtSchoolNumber.Size = new System.Drawing.Size(312, 29);
-            this.txtSchoolNumber.TabIndex = 68;
+            this.txtSchoolNumber.TabIndex = 1;
             // 
             // label9
             // 
@@ -80,7 +80,7 @@
             this.txtEmail.Location = new System.Drawing.Point(12, 241);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(312, 29);
-            this.txtEmail.TabIndex = 66;
+            this.txtEmail.TabIndex = 2;
             // 
             // label8
             // 
@@ -109,7 +109,7 @@
             this.label5.Location = new System.Drawing.Point(347, 26);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 24);
-            this.label5.TabIndex = 64;
+            this.label5.TabIndex = 3;
             this.label5.Text = "Logo";
             // 
             // pictureBox1
@@ -118,7 +118,7 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Location = new System.Drawing.Point(351, 53);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(221, 217);
+            this.pictureBox1.Size = new System.Drawing.Size(221, 140);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 63;
             this.pictureBox1.TabStop = false;
@@ -131,7 +131,7 @@
             this.btnCancel.Location = new System.Drawing.Point(174, 303);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(150, 46);
-            this.btnCancel.TabIndex = 62;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -143,7 +143,7 @@
             this.btnSave.Location = new System.Drawing.Point(12, 303);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 46);
-            this.btnSave.TabIndex = 71;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -163,6 +163,7 @@
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PapayaWhip;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(598, 385);
             this.Controls.Add(this.label6);

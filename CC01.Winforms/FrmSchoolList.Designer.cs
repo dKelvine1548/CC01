@@ -33,7 +33,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.Label();
@@ -41,7 +40,6 @@
             this.Column5 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,34 +69,25 @@
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.ForeColor = System.Drawing.Color.Red;
-            this.btnDelete.Location = new System.Drawing.Point(710, 332);
+            this.btnDelete.Location = new System.Drawing.Point(710, 299);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(110, 33);
             this.btnDelete.TabIndex = 55;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnEdit.Location = new System.Drawing.Point(710, 156);
+            this.btnEdit.Location = new System.Drawing.Point(710, 172);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(110, 33);
             this.btnEdit.TabIndex = 54;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnPrint.Location = new System.Drawing.Point(710, 251);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(110, 33);
-            this.btnPrint.TabIndex = 53;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtSearch
             // 
@@ -147,8 +136,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column5,
             this.Column2,
-            this.Column1,
-            this.Column6});
+            this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(11, 83);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
@@ -161,7 +149,7 @@
             // Column5
             // 
             this.Column5.DataPropertyName = "Logo";
-            this.Column5.FillWeight = 121.8274F;
+            this.Column5.FillWeight = 79.87367F;
             this.Column5.HeaderText = "LOGO";
             this.Column5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Column5.Name = "Column5";
@@ -171,7 +159,7 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "NameSchool";
-            this.Column2.FillWeight = 96.43744F;
+            this.Column2.FillWeight = 117.4143F;
             this.Column2.HeaderText = "NAME SCHOOL";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -179,18 +167,10 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "Email";
-            this.Column1.FillWeight = 96.43744F;
+            this.Column1.FillWeight = 117.4143F;
             this.Column1.HeaderText = "Email";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "SchoolNumber";
-            this.Column6.FillWeight = 85.86746F;
-            this.Column6.HeaderText = "SCHOOL NUMBER";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             // 
             // FrmSchoolList
             // 
@@ -202,13 +182,12 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FrmSchoolList";
             this.Text = "FrmSchoolList";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -223,7 +202,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label Search;
@@ -231,6 +209,5 @@
         private System.Windows.Forms.DataGridViewImageColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

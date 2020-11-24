@@ -13,13 +13,13 @@ namespace CC01.BO
         public string NameSchool { get; set; }
         public string Email { get; set; }
         public long SchoolNumber { get; set; }
-        public string Logo { get; set; }
+        public byte[] Logo { get; set; }
 
         public School()
         {
 
         }
-        public School(string nameSchool, string email, long schoolNumber, string logo)
+        public School(string nameSchool, string email, long schoolNumber, byte[] logo)
         {
             NameSchool = nameSchool;
             Email = email;

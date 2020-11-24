@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CC01.Winforms
 {
    public class StudentListPrint
-   {
+   { 
         public string RegisterNumber { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }

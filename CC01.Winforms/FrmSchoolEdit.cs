@@ -1,11 +1,13 @@
 ﻿using CC01.BLL;
 using CC01.BO;
+using CC01.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,22 +17,27 @@ namespace CC01.Winforms
 {
     public partial class FrmSchoolEdit : Form
     {
-        private SchoolBLO schoolBLO;
+        private Action callBack;
         private School oldSchool;
+
         public FrmSchoolEdit()
         {
             InitializeComponent();
-            schoolBLO = new SchoolBLO(ConfigurationManager.AppSettings["DbFolder"]);
-            oldSchool = schoolBLO.GetSchool();
-            if (oldSchool != null)
-            {
-                txtNameSchool.Text = oldSchool.NameSchool;
-                txtEmail.Text = oldSchool.Email;
-                txtSchoolNumber.Text = oldSchool.SchoolNumber.ToString();
-                pictureBox1.ImageLocation = oldSchool.Logo;
-            }
+
+        }
+        public FrmSchoolEdit(Action callBack) : this()
+        {
+            this.callBack = callBack;
         }
 
+        public FrmSchoolEdit(School school, Action callBack) : this(callBack)
+        {
+            this.oldSchool = school;
+            txtNameSchool.Text = school.NameSchool;
+            txtEmail.Text = school.Email;
+            if (school.Logo != null)
+                pictureBox1.Image = Image.FromStream(new MemoryStream(school.Logo));
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -42,10 +49,16 @@ namespace CC01.Winforms
                     txtNameSchool.Text.ToUpper(),
                     txtEmail.Text,
                     long.Parse(txtSchoolNumber.Text),
-                    pictureBox1.ImageLocation
+                    !string.IsNullOrEmpty(pictureBox1.ImageLocation)?File.ReadAllBytes(pictureBox1.ImageLocation) : this.oldSchool?.Logo
                 );
 
-                schoolBLO.CreateCompany(oldSchool, newSchool);
+                SchoolBLO schoolBLO = new SchoolBLO(ConfigurationManager.AppSettings["DbFolder"]);
+                
+
+                if (this.oldSchool == null)
+                    schoolBLO.CreateSchool(newSchool);
+                else
+                    schoolBLO.EditSchool(oldSchool, newSchool);
 
                 MessageBox.Show
                 (
@@ -54,21 +67,51 @@ namespace CC01.Winforms
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
                 );
+                if (callBack != null)
+                    callBack();
 
-                Close();
+                if (oldSchool != null)
+                    Close();
 
+                txtNameSchool.Clear();
+                txtEmail.Clear();
+                txtSchoolNumber.Clear();
+                txtNameSchool.Focus();
 
             }
             catch (TypingException ex)
             {
                 MessageBox.Show
                (
-                   ex.Message,
+                    ex.Message,
                    "Typing error",
                    MessageBoxButtons.OK,
                    MessageBoxIcon.Warning
                );
             }
+            catch (DuplicateNameException ex)
+            {
+                ex.WriteToFile();
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Duplicate error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+
+            catch (KeyNotFoundException ex)
+            {
+                MessageBox.Show
+               (
+                   ex.Message,
+                   "Not found error",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Warning
+               );
+            }
+
             catch (Exception ex)
             {
                 ex.WriteToFile();

@@ -68,7 +68,6 @@ namespace CC01.Winforms
 
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
-
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)

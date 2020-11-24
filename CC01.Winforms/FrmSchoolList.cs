@@ -1,4 +1,5 @@
 ﻿using CC01.BLL;
+using CC01.BO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,20 @@ namespace CC01.Winforms
             schoolBLO = new SchoolBLO(ConfigurationManager.AppSettings["DbFolder"]);
         }
 
+        private void loadData()
+        {
+            string value = txtSearch.Text.ToLower();
+            var schools = schoolBLO.GetBy
+            (
+                x =>
+                x.NameSchool.ToLower().Contains(value) ||
+                x.NameSchool.ToLower().Contains(value)
+            ).OrderBy(x => x.NameSchool).ToArray();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = schools;
+            lblRowCount.Text = $"{dataGridView1.RowCount} rows";
+            dataGridView1.ClearSelection();
+        }
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
@@ -31,22 +46,45 @@ namespace CC01.Winforms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            Form f = new FrmSchoolEdit(loadData);
+            f.Show();
         }
 
-        //private void loadData()
-        //{
-        //    string value = txtSearch.Text.ToLower();
-        //    var schools = schoolBLO.GetSchool
-        //    (
-        //        x =>
-        //        x.Reference.ToLower().Contains(value) ||
-        //        x.NameSchool.ToLower().Contains(value)
-        //    ).OrderBy(x => x.Reference).ToArray();
-        //    dataGridView1.DataSource = null;
-        //    dataGridView1.DataSource = schools;
-        //    lblRowCount.Text = $"{dataGridView1.RowCount} rows";
-        //    dataGridView1.ClearSelection();
-        //}
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+                {
+                    Form f = new FrmSchoolEdit
+                    (
+                        dataGridView1.SelectedRows[i].DataBoundItem as School,
+                        loadData
+                    );
+                    f.ShowDialog();
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                if (
+                    MessageBox.Show
+                    (
+                        "Do you really want to delete this school(s)?",
+                        "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question
+                    ) == DialogResult.Yes
+                )
+                {
+                    for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+                    {
+                        schoolBLO.DeleteSchool(dataGridView1.SelectedRows[i].DataBoundItem as School);
+                    }
+                    loadData();
+                }
+            }
+        }
     }
 }
